@@ -15,7 +15,7 @@ const ContactForm = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label htmlFor="firstName">First Name*</label>
-          <input
+          <input data-testid="firstNamePlaceholder"
             name="firstName"
             placeholder="Edd"
             ref={register({ required: true, maxLength: 3 })}
@@ -27,7 +27,7 @@ const ContactForm = () => {
 
         <div>
           <label htmlFor="lastName">Last Name*</label>
-          <input
+          <input data-testid="lastNamePlaceholder"
             name="lastName"
             placeholder="Burke"
             ref={register({ required: true })}
