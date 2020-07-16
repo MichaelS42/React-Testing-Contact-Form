@@ -20,3 +20,10 @@ test("displays last name placeholder", function () {
     const lastNameElem = getByTestId("lastNamePlaceholder");
     expect(lastNameElem.textContent).toBe(lastNamePlaceholderExpected)
 });
+
+test("displays password placeholder", function () {
+  const passwordPlaceholderExpected = ""
+  const { getByTestId } = render(<App />);
+    const passwordElem = getByTestId("passwordPlaceholder")
+    expect(passwordElem.textContent).toBe(passwordPlaceholderExpected);
+})

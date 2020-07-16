@@ -46,6 +46,19 @@ const ContactForm = () => {
             <p>Looks like there was an error: {errors.email.type}</p>
           )}
         </div>
+
+        <div>
+          <label htmlFor="password">Password*</label>
+          <input data-testid="passwordPlaceholder"
+            name="password"
+            placeholder="password"
+            ref={register({ required: true })}
+          />
+          {errors.password && (
+            <p>Looks like there was an error: {errors.password.type}</p>
+          )}
+        </div>
+
         <div>
           <label htmlFor="message">Message</label>
           <textarea name="message" ref={register({ required: false })} />
