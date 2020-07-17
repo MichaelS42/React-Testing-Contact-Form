@@ -1,6 +1,7 @@
 import React from "react";
-import { render, getByAltText } from "@testing-library/react";
+import { render, getByAltText, fireEvent } from "@testing-library/react";
 import App from "./App";
+import ContactForm from "./components/ContactForm";
 
 test("renders App without crashing", () => {
   render(<App />);
@@ -27,3 +28,12 @@ test("displays password placeholder", function () {
     const passwordElem = getByTestId("passwordPlaceholder")
     expect(passwordElem.textContent).toBe(passwordPlaceholderExpected);
 })
+
+// test("submit button works", () => {
+//   // const { getByTestId } = render(<App />);
+//   // let submit = getBy
+//   const onSubmit = jest.fn();
+//   const { getByTestId } = render(<ContactForm onSubmit={onSubmit} />);
+//   fireEvent.submit(getByTestId("form"));
+//   expect(onSubmit).toHaveBeenCalled();
+// })
